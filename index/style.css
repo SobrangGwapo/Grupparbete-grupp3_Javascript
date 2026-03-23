@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* ─── HEADER ─────────────────────────────────────────────────────────── */
+.header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #8b0000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo h1 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: white;
+}
+
+/* ─── NAV ────────────────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.events-btn,
+.admin-btn {
+  background: none;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.events-btn:hover,
+.admin-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* ─── MAIN ───────────────────────────────────────────────────────────── */
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+/* ─── EVENTS ─────────────────────────────────────────────────────────── */
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
