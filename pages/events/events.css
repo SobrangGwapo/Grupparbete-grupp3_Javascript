@@ -1,0 +1,302 @@
+
+/* ── EVENTKORT ── */
+.event-card {
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.7);
+  background-color: rgba(28,18,18,0.88);
+}
+
+.event-card-inner {
+  border: 1px solid rgba(255,255,255,0.1);
+  margin: 5px;
+  border-radius: 2px;
+}
+
+/* Kortets header (eventnamn + registreringsknapp) */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Eventnamn */
+.event-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Anmäl dig-knapp */
+.btn-register {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to bottom, #a00000, #6b0000);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.45rem 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: filter 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+.btn-register:hover { filter: brightness(1.2); transform: translateY(-1px); }
+.btn-register:active { transform: translateY(0); }
+
+
+/* ── KORTETS METADATA (datum, plats, kontakt) ── */
+.card-meta {
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: #ddd;
+}
+
+.meta-item strong { color: #fff; }
+.meta-divider { color: rgba(255,255,255,0.2); }
+
+
+/* ── DELTAGARTABELL ── */
+.participant-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Tabellhuvud */
+.participant-table thead tr { background: #6b0000; }
+
+.participant-table thead th {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.participant-table thead th:last-child { border-right: none; }
+
+/* Tabellrader */
+.participant-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.15s;
+}
+.participant-table tbody tr:hover { background: rgba(139,0,0,0.12); }
+
+/* Tabellceller */
+.participant-table tbody td {
+  padding: 0.65rem 0.8rem;
+  font-size: 0.85rem;
+  color: #ccc;
+  border-right: 1px solid rgba(255,255,255,0.05);
+  vertical-align: middle;
+}
+.participant-table tbody td:last-child {
+  border-right: none;
+  text-align: center;
+}
+
+/* Radera-knapp */
+.btn-delete {
+  background: none;
+  border: none;
+  color: #8B0000;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.15s, transform 0.1s;
+}
+.btn-delete:hover { color: #c0392b; transform: scale(1.15); }
+
+/* Text när inga deltagare finns */
+.no-participants {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: 0.82rem;
+  padding: 1rem;
+}
+
+/* Meddelande när inga events finns */
+.no-events {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  padding: 3rem 0;
+}
+
+
+/* ── MODAL (ANMÄL DIG) ── */
+
+/* Bakgrund bakom modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+/* Modalruta */
+.modal {
+  background-color: #3a2e2e;
+  border: 2px solid #666;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 50px rgba(0,0,0,0.9);
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Modalens header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.85rem 1.5rem;
+  background: rgba(0,0,0,0.35);
+  border-bottom: 2px solid #8B0000;
+}
+
+.modal-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+/* Stäng-knapp (X) */
+.modal-close {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8B0000;
+  border: 1px solid #bbb;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.15s;
+  line-height: 1;
+}
+.modal-close:hover { background: #a50000; }
+
+
+/* ── REGISTRERINGSFORMULÄR ── */
+#register-form { padding: 1rem 1.3rem 1.3rem; }
+
+/* Label + input på samma rad */
+.form-control {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.form-control label {
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.form-control input,
+.form-control select {
+  width: 100%;
+  padding: 0.42rem 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: #f0ebe6;
+  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.83rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-control input::placeholder { color: #999; font-style: italic; }
+.form-control input:focus,
+.form-control select:focus { border-color: #8B0000; }
+.form-control select option { background: #fff; color: #222; }
+
+
+/* ── KNAPPAR I MODAL ── */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.48rem 1.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s;
+  letter-spacing: 0.03em;
+}
+
+/* Avbryt-knapp */
+.btn-secondary {
+  background: #555;
+  color: #eee;
+  border: 1px solid #777;
+}
+.btn-secondary:hover { background: #666; }
+
+/* Skicka-knapp */
+.btn-primary {
+  background: #8B0000;
+  color: #fff;
+  border: 1px solid #a00;
+}
+.btn-primary:hover { background: #a50000; }
