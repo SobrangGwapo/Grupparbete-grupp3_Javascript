@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "namn": "Söndags-Sparring",
+      "datum": "2024-05-12",
+      "tid": "12:00",
+      "adress": "Vasagatan 30, Skövde BC",
+      "klubb": "Skövde Boxning Club",
+      "kontakt": "Ricky Svensson",
+      "telefon": "070-123 4567",
+      "deltagare": [
+        { "id": 1, "fornamn": "Viktor", "efternamn": "Karlsson", "kon": "Kille", "vikt": 67, "foddar": 2006, "klubb": "Skövde Boxning Club", "telefon": "070-111 2223" },
+        { "id": 2, "fornamn": "Emma",   "efternamn": "Larsson",  "kon": "Tjej",  "vikt": 55, "foddar": 2007, "klubb": "Skövde Boxning Club", "telefon": "070-556 1234" }
+      ]
+    }
+  ]
+}
