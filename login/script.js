@@ -8,7 +8,7 @@ form.addEventListener('submit', function(event) {
 
     if (username === 'admin' && password === '123456') {
         alert('Inloggning lyckades!');
-        location.href = 'index.html';
+        location.href = '/index/index.html';
      } else {
         alert('Felaktigt användarnamn eller lösenord. Försök igen.');
     }
