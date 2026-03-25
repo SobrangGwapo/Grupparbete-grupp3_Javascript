@@ -1,0 +1,50 @@
+  <div id="events-container" class="events-container"></div>
+<p id="no-events-msg" style="display:none; text-align:center; color:#888; padding:2rem;">
+  Inga events hittades. Kontakta admin för att lägga till events.
+</p>
+
+<!-- REGISTRATION -->
+<div id="modal-overlay" class="modal-overlay" style="display:none;">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Anmäl dig</h3>
+      <button id="close-modal" class="modal-close">&times;</button>
+    </div>
+    <form id="register-form" novalidate>
+      <input type="hidden" id="event-id-input" />
+      <div class="form-control">
+        <label for="namn">Namn</label>
+        <input type="text" id="namn" placeholder="För- och efternamn" required />
+      </div>
+      <div class="form-control">
+        <label for="kon">Kön</label>
+        <select id="kon" required>
+          <option value="" disabled selected>Välj kön</option>
+          <option value="Kille">Kille</option>
+          <option value="Tjej">Tjej</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="fodelsear">Födelseår</label>
+        <input type="number" id="fodelsear" placeholder="ÅÅÅÅ" min="1950" max="2015" required />
+      </div>
+      <div class="form-control">
+        <label for="vikt">Vikt (kg)</label>
+        <input type="number" id="vikt" placeholder="kg" min="30" max="200" required />
+      </div>
+      <div class="form-control">
+        <label for="klubb">Klubb</label>
+        <input type="text" id="klubb" placeholder="Klubbnamn" required />
+      </div>
+      <div class="form-control">
+        <label for="mobilnummer">Mobilnummer</label>
+        <input type="tel" id="mobilnummer" placeholder="Mobilnummer" required />
+      </div>
+      <div class="modal-buttons">
+        <button type="button" id="cancel-btn" class="btn btn-secondary">Avbryt</button>
+        <button type="submit" class="btn btn-primary">Skicka</button>
+      </div>
+    </form>
+  </div>
+</div>
+  
