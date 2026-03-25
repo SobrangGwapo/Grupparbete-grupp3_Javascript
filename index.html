@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skövde Boxing Club</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./pages/events/events.css" />
+    <script src="index.js" defer></script>
+    <script src="./scripts/storage.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -14,19 +17,19 @@
         </div>
 
         <nav class="nav">
-            <button class="events-btn">EVENTS</button>
+            <button id="events-btn" class="events-btn" href="#">EVENTS</button>
             <button class="admin-btn">ADMIN</button>
         </nav>
     </header>
-
+    
     <main class="main">
-
         <h2 class="title">Skövde Boxing Club Event Planner</h2>
-
         <h3 class="subtitle">Events</h3>
 
-        <div class="events-container">
+       <div id="events" class="events-container hidden">
+       
         </div>
+        
     </main>
 
 </body>

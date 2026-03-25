@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlogg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Logga In</h2>
+
+        <form class="space-y-4">
+            <div>
+                <label for="username" class="block text-gray-700">Användarnamn:</label>
+                <input type="text" id="username" name="username" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">       
+            </div>
+            <div class="relative w-full">
+                <label for="password" class="block text-gray-700">Lösenord:</label>
+                <input type="password" id="password" name="password" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="button" id="togglePassword" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-sm text-blue-500 hover:underline">Visa</button>
+            </div>
+                
+            <div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200">
+                 Logga in
+                </button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

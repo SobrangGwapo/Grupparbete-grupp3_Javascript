@@ -312,9 +312,9 @@ const initApp = () => {
 };
 
 
-// Hjälpfunktion för att uppdatera events manuellt
+
 const refreshEvents = () => displayEvents(getFromStorage('events'));
 
 
-// Kör init när sidan är redo
-document.addEventListener('DOMContentLoaded', initApp);
+// Kör init när scriptet laddas
+initApp();
