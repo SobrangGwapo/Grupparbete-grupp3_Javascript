@@ -1,0 +1,17 @@
+{
+  "name": "event-planner",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "server": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.15"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.1.1",
+    "vitest": "^4.1.1"
+  }
+}
